@@ -166,7 +166,9 @@ int main() {
 	//질문 수
 	while (m--) {
 		cin >> data;
+		//3번 문제
 		t.printDepth(data);
+		//4번 
 		//t.maxInDepth(data);
 	}
 	return 0;
