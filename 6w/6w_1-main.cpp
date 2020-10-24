@@ -50,7 +50,7 @@ public:
 
 Tree::Tree(int data) {
 	root = new Node(data);
-	node_list.push_back(root); //ÀÌ°É ³Ö¾î¾ß root¸®½ºÆ®¿¡ Æ÷ÇÔµÇ´Â°Å ¾Æ³Ä?
+	node_list.push_back(root); //ì´ê±¸ ë„£ì–´ì•¼ rootë¦¬ìŠ¤íŠ¸ì— í¬í•¨ë˜ëŠ”ê±° ì•„ëƒ?
 }
 int Tree::size() {
 	return node_list.size();
@@ -142,7 +142,7 @@ int main() {
 		else if (str == "print") {
 			int data;
 			cin >> data;
-			t.printSib(data);
+			t.printChi(data);
 		}
 		else if (str == "size")
 			cout << t.size() << endl;
