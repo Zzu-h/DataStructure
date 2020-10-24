@@ -8,8 +8,8 @@ public:
 	arrQueue(int size);
 	int size();
 	bool isEmpty();
-	int front();
-	int rear();
+	void front();
+	void rear();
 	void enqueue(int data);
 	void dequeue();
 	int* Q;
@@ -21,7 +21,7 @@ public:
 arrQueue::arrQueue(int size) {
 	this->Q = new int[size];
 	this->capacity = size;
-	this->f = -1;
+	this->f = 0;
 	this->r = -1;
 	for (int i = 0; i <= size; i++) {
 		Q[i] = 0;
@@ -39,18 +39,18 @@ bool arrQueue::isEmpty() {
 		return false;
 }
 
-int arrQueue::front() {
+void arrQueue::front() {
 	if (isEmpty())
 		cout << "Empty" << endl;
 	else
-		return Q[f];
+		cout << Q[f] << endl;
 }
 
-int arrQueue::rear() {
+void arrQueue::rear() {
 	if (isEmpty())
 		cout << "Empty" << endl;
 	else
-		return Q[r];
+		cout << Q[r] << endl;
 }
 
 void arrQueue::enqueue(int data) {
@@ -63,7 +63,7 @@ void arrQueue::enqueue(int data) {
 }
 
 void arrQueue::dequeue() {
-	if (isEmpty())
+	if (isEmpty() == true)
 		cout << "Empty" << endl;
 	else
 	{
@@ -95,10 +95,10 @@ int main() {
 			cout << (Q.isEmpty() ? 1 : 0) << endl;
 		}
 		else if (cmd == "front") {
-			cout << Q.front() << endl;
+			Q.front();
 		}
 		else if (cmd == "rear") {
-			cout << Q.rear() << endl;
+			Q.rear();
 		}
 		else
 			continue;
