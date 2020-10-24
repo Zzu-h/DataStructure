@@ -1,4 +1,4 @@
-//ÀÌ¹ÌÁö Âü°í
+//ì´ë¯¸ì§€ ì°¸ê³ 
 #include<iostream>
 #include<string>
 using namespace std;
@@ -88,14 +88,18 @@ int LinkedQueue::isEmpty() {
 }
 
 int LinkedQueue::front() {
-	if (isEmpty() == true)
+	if (isEmpty() == true) {
 		cout << "Empty" << endl;
+		return 0;
+	}
 	else
 		return S->front();
 }
 int LinkedQueue::rear() {
-	if (isEmpty() == true)
+	if (isEmpty() == true) {
 		cout << "Empty" << endl;
+		return 0;
+	}
 	else
 		return S->end();
 }
@@ -125,7 +129,7 @@ int main() {
 		cin >> n;
 		LinkedQueue X, Y;
 		int x_num = 0, y_num = 0;
-		//µ¦ ÀÔ·Â
+		//ë± ì…ë ¥
 		int temp = 0;
 		for (int i = 0; i < n; i++) {
 			cin >> num;
@@ -135,11 +139,11 @@ int main() {
 			cin >> num;
 			Y.enqueue(num);
 		}
-		//-------¿©±â±îÁö
+		//-------ì—¬ê¸°ê¹Œì§€
 
 
 		for (int i = 0; i < n; i++) {
-			//º»°ÔÀÓ
+			//ë³¸ê²Œì„
 			x_num += X.front();
 			y_num += Y.front();
 
@@ -151,11 +155,11 @@ int main() {
 				y_num = 0;
 				x_num = temp - 1;
 		
-				// Y°¡ ´õ Å¬ °æ¿ì
+				// Yê°€ ë” í´ ê²½ìš°
 			}
 			else if (temp > 0) {
 				X.point++;
-				//X°¡ ´õ Å¬ °æ¿ì
+				//Xê°€ ë” í´ ê²½ìš°
 				y_num = temp - 1;
 				x_num = 0;
 		
