@@ -60,7 +60,7 @@ public:
 
 Tree::Tree(int data) {
 	root = new Node(data);
-	node_list.push_back(root); //ÀÌ°É ³Ö¾î¾ß root¸®½ºÆ®¿¡ Æ÷ÇÔµÇ´Â°Å ¾Æ³Ä?
+	node_list.push_back(root); //ì´ê±¸ ë„£ì–´ì•¼ rootë¦¬ìŠ¤íŠ¸ì— í¬í•¨ë˜ëŠ”ê±° ì•„ëƒ?
 }
 int Tree::size() {
 	return node_list.size();
@@ -153,21 +153,21 @@ void Tree::maxInDepth(int data) {
 
 int main() {
 	//practice 6w-2
-	//Node¿¡ depth º¯¼ö¸¦ Ãß°¡ÇÑ´Ù.
+	//Nodeì— depth ë³€ìˆ˜ë¥¼ ì¶”ê°€í•œë‹¤.
 	int n, m, data;
 	cin >> n >> m;
 	Tree t = Tree(1);
-	//³ëµå Ãß°¡
+	//ë…¸ë“œ ì¶”ê°€
 	while (n--) {
 		int par, data;
 		cin >> par >> data;
 		t.insertNode(par, data);
 	}
-	//Áú¹® ¼ö
+	//ì§ˆë¬¸ ìˆ˜
 	while (m--) {
 		cin >> data;
-		//t.printDepth(data);
-		t.maxInDepth(data);
+		t.printDepth(data);
+		//t.maxInDepth(data);
 	}
 	return 0;
 }
