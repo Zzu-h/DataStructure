@@ -64,8 +64,8 @@ public:
 	LinkedQueue();
 	int size();
 	int isEmpty();
-	int front();
-	int rear();
+	void front();
+	void rear();
 	void enqueue(int e);
 	void dequeue();
 };
@@ -85,17 +85,17 @@ int LinkedQueue::isEmpty() {
 		return 0;
 }
 
-int LinkedQueue::front() {
+void LinkedQueue::front() {
 	if (isEmpty() == true)
 		cout << "Empty" << endl;
 	else
-		return S->front();
+		cout << S->front() << endl;
 }
-int LinkedQueue::rear() {
+void LinkedQueue::rear() {
 	if (isEmpty() == true)
 		cout << "Empty" << endl;
 	else
-		return S->end();
+		cout << S->end() << endl;
 }
 
 void LinkedQueue::enqueue(int e) {
@@ -137,10 +137,10 @@ int main() {
 			cout << (Q.isEmpty() ? 1 : 0) << endl;
 		}
 		else if (cmd == "front") {
-			cout << Q.front() << endl;
+			Q.front();
 		}
 		else if (cmd == "rear") {
-			cout << Q.rear() << endl;
+			Q.rear();
 		}
 		else
 			continue;
