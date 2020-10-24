@@ -142,7 +142,10 @@ int main() {
 		else if (str == "print") {
 			int data;
 			cin >> data;
+			//6_1 문제
 			t.printChi(data);
+			//6_2 문제
+			//t.printSib(data);
 		}
 		else if (str == "size")
 			cout << t.size() << endl;
