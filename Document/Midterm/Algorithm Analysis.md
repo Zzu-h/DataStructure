@@ -79,6 +79,7 @@ int factorial(int n)
 여기서 호출 스택에서는 1번의 공간이 할당되고 단지 변수만 따로 고정 공간에 저장되어진다.    
 즉, Example 1은 S(P) = 1 + S_P(n) / Example 2은 S(P) = 3 + S_P(1) 이 된다.    
 따라서, `Example 1은 O(n)`, `Example 2은 O(1)`이 된다. 
+***
 ## 개념   
 * Big-Oh    
     * f(n) is `O(g(n))` if f(n) is asymptotically **less than or equal** to g(n)    
