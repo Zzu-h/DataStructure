@@ -34,6 +34,7 @@ public:
 ```
 `시험 포인트`    
 > Stack to Queue or Queue to Stack
+> Queue에서 확인
 ### Array-based Stack
 각 연산은 `Time Cost: O(1)`이다.    
 `Space Cost: O(Maximum size)`
