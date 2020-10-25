@@ -92,6 +92,18 @@ Algorithm BinaryFib(k):
     else
         return BinaryFib(k - 1) + BinaryFib(k - 2)
 ```
+```
+T(n) = T(n-1) + T(n-2) + C
+    >= T(n-2) + T(n-2) = 2T(n-2)
+    >= 2*2T(n-4)
+    >= 2*2*2T(n-6)
+    ...
+    >= (2^i)*T(n-2i)
+    >= (2^k)*T(0)
+    
+=> T(n) >= (2^k)
+Time: O(2^k)
+```
 > `Time Cost: O(2^n)`   
 > `Space Cost: O(n)`
 
