@@ -93,6 +93,7 @@ Algorithm BinaryFib(k):
         return BinaryFib(k - 1) + BinaryFib(k - 2)
 ```
 ```
+//Time complexity 계산
 T(n) = T(n-1) + T(n-2) + C
     >= T(n-2) + T(n-2) = 2T(n-2)
     >= 2*2T(n-4)
