@@ -44,7 +44,7 @@ class Node{
         * 이를 ***Upheap***이라 한다.
     * Heap(우선순위대로 정렬되었을 경우)할 경우 함수를 종료한다.
 3. Swap 후 다시 2번 과정을 Heap될 때 까지 반복한다.    
-![Heap-Insert](./img/Heap-Insert.jpg)
+![Heap-Insert](./img/Heap-Insert.JPG)
 
 * Upheap 알고리즘
 ```c++
@@ -67,7 +67,7 @@ v가 최대 root까지 올라갈 수 있으므로 maximum h이다.
         * 이를 ***Downheap***이라 한다.
     * heap할 경우 함수를 종료한다.
 4. Swap한 후 다시 3번 과정을 Heap할 때 까지 반복한다.    
-![Heap-Delete](./img/Heap-Delete.jpg)
+![Heap-Delete](./img/Heap-Delete.JPG)
 
 * Downheap 알고리즘
 ```c++
@@ -92,7 +92,7 @@ v가 최대 leaf까지 내려갈 수 있으므로 maximum h이다.
  3. u를 제거와 동시에 반환하고  현재 Heap에 Heapify를 수행한다.
     * 2번과 3번 과정은 removeMax()를 수행하는 것과 같다.
  4. Heap에 남은 데이터가 없을 때 까지 2번부터 현재까지의 과정을 반복한다.    
- ![In-place-Heap-Sort](./img/In-place-Heap-Sort.jpg)    
+ ![In-place-Heap-Sort](./img/In-place-Heap-Sort.JPG)    
 #### Time Cost: O(nlogn)    
 Heapify 할 때마다 log(n-i)가 소요가 된다. 이 과정이 총 n번 실시를 하므로 O(nlogn)이다.
 ***
@@ -100,7 +100,7 @@ Heapify 할 때마다 log(n-i)가 소요가 된다. 이 과정이 총 n번 실�
 주어진 배열을 가장 낮은 Level부터 해서, 한 단계씩 Heapfy하면서 Heap을 만들어 나가는 구조    
 - 주어진 Tree를 최소한의 `SubTree`로 잘게 나누어 시작한다.
 - 그 SubTree를 Heapify를 하고 점차 더 큰 SubTree를 Heapfiy하여 root를 포함한 전체 Tree를 완성해 나가는 과정    
-![Bottom-up-heap-construction](./img/Bottom-up-heap-construction.jpg)    
+![Bottom-up-heap-construction](./img/Bottom-up-heap-construction.JPG)    
 * **Time Cost: O(n)**
     * subtree의 수는 (2^(max h)-2)이다. 각 subtree에서 Heapify의 Complexity는 O(1)이므로 전체 Subtree에서 Heapify의 Time complexity는 (2^(max h)-2)O(1) => O(2^h)로 볼 수 있다.    
     * h는 최대  logn이므로 O(2^(logn)) = O(n)임을 알 수 있따.
