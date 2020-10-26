@@ -4,7 +4,7 @@
 Tree는 부모 자식 관계를 가진 노드들로 구성되어 있다.    
 ***
 ## 트리 용어 정리
-![Tree](/img/Tree.jpg)
+![Tree](./img/Tree.jpg)
 * Root
     * 부모가 없는 노드
     * 1번 노드가 Root 노드이다.
