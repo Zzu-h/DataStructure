@@ -54,26 +54,26 @@ Algorithm PQ-Sort(S, C)
     P <- priority queue with comparator C;
     while (!S.empty())  //1번 과정
         e <- S.removeFront();
-        P.insert (e, );
+        P.insert (e, C);
     while (!P.empty())  //2번 과정
         e <- P.removeMin();
         S.addTail(e);
 ```
 1번 과정과 2번 과정의 차이에 따라    
 즉, P에 저장되는 방식에 따라    
-Unsorted list와 Sorted list로 구분된다.    
+Priority Queue를 만드는데 Unsorted list와 Sorted list로 구분된다.    
 `Unsorted list`: 1번 과정에서 리스트가 **그대로 저장**될 경우, 2번 과정에서 **정렬**됨. Selection Sort로 정렬된다.    
 `Sorted list`: 1번 과정에서 **정렬**되고, 2번 과정에서 리스트가 **그대로 전달**될 경우, Selection Sort로 정렬된다.
-
+> [Heap](./Heap.md)도 Priority Queue를 만들 수 있다.
 1. Selection Sort: 2번 과정에서 List가 우선 순위에 따라 정렬 될 경우
     * 1번 과정에서 P는 단순히 삽입 작업을 한다.
-    * 2번 과정에서 P는 리스트 S로 저장해주는데, 이때 P의 데이터에서 우선 순위에 따라 가장 높거나 낮은 순으로 S로 전달한다. 즉, P의 데이터를 ***내보낼 때*** 우선 순위에 따라 내보내준다.
+    * 2번 과정에서 P는 리스트 S로 저장해주는데, 이때 P의 데이터에서 우선 순위에 따라 가장 높은 순으로 S로 전달한다. 즉, P의 데이터를 ***내보낼 때*** 우선 순위에 따라 내보내준다.
     * Complexity 계산
         * Time Cost: O(n^2)
             * 1번 과정에서 단순히 삽입을 하므로 O(1) 이나, 2번 과정에서 총 n(n+1)/2의 time이 소요되었다. 따라서 O(n^2)이다.
         * Space Cost: O(n)
             * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.    
-    ![Seleciton-Sort](./img/Selection-Sort.PNG)
+    ![Seleciton-Sort](./img/Selection-Sort.png)
 2. Insertion Sort: 1번 과정에서 List가 우선 순위에 따라 정렬 될 경우
     * 1번 과정에서 <u>S는 데이터를 저장된 순서대로 내보낸다.</u> P에 ***저장될 때*** 우선 순위에 따라 저장된다.
     * 2번 과정에서 P의 정보를 S로 단순 전달 작업을 한다.
@@ -82,23 +82,23 @@ Unsorted list와 Sorted list로 구분된다.
             * 1번 과정에서 총 n(n+1)/2의 time이 소요되었다. 2번 과정에서는 단순히 전달 작업을 하므로 O(1) 이다. 따라서 O(n^2)이다.
         * Space Cost: O(n)
             * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.    
-    ![Insertion-Sort](./img/Insertion-Sort.PNG)
+    ![Insertion-Sort](./img/Insertion-Sort.png)
 ### In-place Sort(제자리 정렬)
 정렬을 위해 기본 메모리를 제외한 추가적인 메모리를 사용하지 않음    
 In-place sort들은 오직 요소의 대체 또는 SWAP으로 정렬되어진다.    
 Ex) Bubble sort, heap sortm, 아래와 같은 insertion / selection sort가 해당함
 * In-place Insertion Sort
-    * **i 번째의 루틴**마다 우선순위가 낮은 데이터를 **i번의 비교**를 통해 앞으로 보낸다.
+    * **i 번째의 루틴**마다 우선순위가 높은 데이터를 **i번의 비교**를 통해 앞으로 보낸다.
     * 이전 루틴에서 작업했던 요소들 다음 부터 처음까지 비교 연산을 하면서    
     (= `i번째 작업`에서 `i + 1요소부터 0번째 요소까지`)    
     Swap을 통해 정렬해 나간다.
     * Bubble sort와 혼동되지 않기!    
-    ![In-place Insertion-Sort](./img/In-place-Insertion-sort.PNG)
+    ![In-place Insertion-Sort](./img/In-place-Insertion-Sort.png)
 * In-place Selection Sort
-    * **i 번째의 루틴**에서 정렬되지 않은 데이터 리스트 중 우선순위가 가장 낮은 데이터를 왼쪽으로 보낸다.
-    * i번째 작업에서 unsorted list에서 우선 순위가 가장 낮은 데이터를 sorted list 바로 다음(i+1번째 요소)과 Swap한다. 
+    * **i 번째의 루틴**에서 정렬되지 않은 데이터 리스트 중 우선순위가 가장 높은 데이터를 왼쪽으로 보낸다.
+    * i번째 작업에서 unsorted list에서 우선 순위가 가장 높은 데이터를 sorted list 바로 다음(i+1번째 요소)과 Swap한다. 
     * Bubble sort와 혼동되지 않기!    
-    ![In-place Selection-Sort](./img/In-place-Selection-sort.PNG)
+    ![In-place Selection-Sort](./img/In-place-Selection-Sort.png)
 * 위 sort의 complexity
     * Time Cost: O(n^2)
         * 총 n번 루틴 동안 n(n+1)/2번의 swap이 있다. 따라서 O(n^2)이다.
