@@ -76,6 +76,7 @@ class Tree{
     list<Node> nodes(); //전체 트리를 반환한다.
 }
 ```
+***
 `일단 참고`    
 depth 함수 recursion 함수로 구현
 ```c++
