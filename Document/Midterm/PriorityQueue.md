@@ -72,7 +72,7 @@ Unsorted list와 Sorted list로 구분된다.
         * Time Cost: O(n^2)
             * 1번 과정에서 단순히 삽입을 하므로 O(1) 이나, 2번 과정에서 총 n(n+1)/2의 time이 소요되었다. 따라서 O(n^2)이다.
         * Space Cost: O(n)
-            * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.
+            * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.    
     ![Seleciton-Sort](./img/Selection-Sort.PNG)
 2. Insertion Sort: 1번 과정에서 List가 우선 순위에 따라 정렬 될 경우
     * 1번 과정에서 <u>S는 데이터를 저장된 순서대로 내보낸다.</u> P에 ***저장될 때*** 우선 순위에 따라 저장된다.
@@ -81,7 +81,7 @@ Unsorted list와 Sorted list로 구분된다.
         * Time Cost: O(n^2)
             * 1번 과정에서 총 n(n+1)/2의 time이 소요되었다. 2번 과정에서는 단순히 전달 작업을 하므로 O(1) 이다. 따라서 O(n^2)이다.
         * Space Cost: O(n)
-            * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.
+            * 기본적으로 입력되는 리스트가 n의 공간을 소요하나 추가적으로 소요되는 PQ는 리스트의 크기 n이므로 O(n)의 공간을 소요한다.    
     ![Insertion-Sort](./img/Insertion-Sort.PNG)
 ### In-place Sort(제자리 정렬)
 정렬을 위해 기본 메모리를 제외한 추가적인 메모리를 사용하지 않음    
@@ -92,12 +92,12 @@ Ex) Bubble sort, heap sortm, 아래와 같은 insertion / selection sort가 해�
     * 이전 루틴에서 작업했던 요소들 다음 부터 처음까지 비교 연산을 하면서    
     (= `i번째 작업`에서 `i + 1요소부터 0번째 요소까지`)    
     Swap을 통해 정렬해 나간다.
-    * Bubble sort와 혼동되지 않기!
+    * Bubble sort와 혼동되지 않기!    
     ![In-place Insertion-Sort](./img/In-place-Insertion-sort.PNG)
 * In-place Selection Sort
     * **i 번째의 루틴**에서 정렬되지 않은 데이터 리스트 중 우선순위가 가장 낮은 데이터를 왼쪽으로 보낸다.
     * i번째 작업에서 unsorted list에서 우선 순위가 가장 낮은 데이터를 sorted list 바로 다음(i+1번째 요소)과 Swap한다. 
-    * Bubble sort와 혼동되지 않기!
+    * Bubble sort와 혼동되지 않기!    
     ![In-place Selection-Sort](./img/In-place-Selection-sort.PNG)
 * 위 sort의 complexity
     * Time Cost: O(n^2)
