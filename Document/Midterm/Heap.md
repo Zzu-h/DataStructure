@@ -103,4 +103,4 @@ Heapify 할 때마다 log(n-i)가 소요가 된다. 이 과정이 총 n번 실�
 ![Bottom-up-heap-construction](./img/Bottom-up-heap-construction.JPG)    
 * **Time Cost: O(n)**
     * subtree의 수는 (2^(max h)-2)이다. 각 subtree에서 Heapify의 Complexity는 O(1)이므로 전체 Subtree에서 Heapify의 Time complexity는 (2^(max h)-2)O(1) => O(2^h)로 볼 수 있다.    
-    * h는 최대  logn이므로 O(2^(logn)) = O(n)임을 알 수 있따.
+    * h는 최대  logn이므로 O(2^(logn)) = O(n)임을 알 수 있.
