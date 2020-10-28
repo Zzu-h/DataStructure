@@ -12,7 +12,7 @@
 * 프로그램보다 덜 세밀화 됨
 * 코드 레벨이 디테일 한 부분은 숨김
 ***
-## RAM Mode
+## RAM Model
 일종의 time complexity. 다른 모델도 존재한다.    
  T(n): # of basic operations, given n input element    
  * Primitive(basic) operation
