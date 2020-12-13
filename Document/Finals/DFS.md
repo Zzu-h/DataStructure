@@ -7,9 +7,9 @@ Algorithm
 ```c++
 DFS(G, v):
     mark v as "vistied";
-    for each ∈ neighbors(v):
+    for w ∈ neighbors(v):
         if w is "unvisited":
-            DFS(G, u);
+            DFS(G, w);
 ```
 Time Complexity    
 if G is represented as adjancency list:  O(n+m)    
