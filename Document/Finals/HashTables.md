@@ -94,7 +94,7 @@ hash table에서 삽입 삭제가 계속 이루어 졌을 때, find 메소드나
 - When the table is getting full, the operations are getting slow
 - For quadratic probing, insertions might fail when the table is more than half full
 
-### Rehash operastion
+### Rehash operation
 - 기존 hash table의 사이즈가 약 두 배 큰 또다른 hash table을 만든다.
 - 그와 동시에 새로운 hash function을 같이 만든다.
 - 기존 table을 스캔하고 각각의 요소들을 새로운 hash function으로 재삽입을 진행한다.
